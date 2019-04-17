@@ -41,6 +41,7 @@ namespace CreApps.StarterKit.Web
 
             services.AddScoped(typeof(IRepository<,>), typeof(Repository<,>));
             services.AddTransient<ITicketService, TicketService>();
+            services.AddTransient<IParametersService, ParametersService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

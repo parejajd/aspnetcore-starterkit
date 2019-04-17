@@ -21,9 +21,9 @@
             <tr>
                 <td>@ticket.Id</td>
                 <td>@ticket.Subject</td>
-                <td>@ticket.Type</td>
-                <td>@ticket.Priority</td>
-                <td>@ticket.Status</td>
+                <td>@ticket.Type.TicketTypeName</td>
+                <td>@ticket.Priority.PriorityName</td>
+                <td>@ticket.Status.StatusName</td>
             </tr>
         }
     </tbody>

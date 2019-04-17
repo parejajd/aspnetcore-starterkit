@@ -9,6 +9,6 @@
         /// <summary>
         /// property that identifies the class
         /// </summary>
-        public virtual TId Id { get; protected set; }
+        public virtual TId Id { get; set; }
     }
 }

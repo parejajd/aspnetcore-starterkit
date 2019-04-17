@@ -12,7 +12,7 @@ namespace CreApps.StarterKit.DataAccess
     public class Repository<T, TId> : RepositoryWithTypedId<T, TId>, IRepository<T, TId>
       where T : class, IEntityWithTypedId<TId>
     {
-        public Repository(DbContext context) : base(context)
+        public Repository(StarterKitDbContext context) : base(context)
         {
 
         }
