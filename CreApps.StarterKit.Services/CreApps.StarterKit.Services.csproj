@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CreApps.StarterKit.DataAccess\CreApps.StarterKit.DataAccess.csproj" />
+    <ProjectReference Include="..\CreApps.StarterKit.Models\CreApps.StarterKit.Models.csproj" />
+  </ItemGroup>
+
+</Project>
