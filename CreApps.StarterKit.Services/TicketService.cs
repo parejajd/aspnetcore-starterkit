@@ -16,13 +16,13 @@ namespace CreApps.StarterKit.Services
         {
             _ticketRepository = ticketRepository;
         }
-        
+
         public async Task<IList<Ticket>> GetAll()
         {
             var tickets = await _ticketRepository.Query()
-                                .Include(x=>x.Type)
-                                .Include(x=>x.Status)
-                                .Include(x=>x.Priority)
+                                .Include(x => x.Type)
+                                .Include(x => x.Status)
+                                .Include(x => x.Priority)
                                 .ToListAsync();
 
             return tickets;
@@ -36,7 +36,7 @@ namespace CreApps.StarterKit.Services
 
         public async Task Delete(int ticketId)
         {
-            var ticket =await _ticketRepository.Query()
+            var ticket = await _ticketRepository.Query()
                             .FirstOrDefaultAsync(x => x.Id == ticketId);
 
             _ticketRepository.Remove(ticket);
@@ -56,6 +56,12 @@ namespace CreApps.StarterKit.Services
             oldTicket.UpdatedOn = DateTime.Now;
 
             await _ticketRepository.SaveChangeAsync();
+        }
+
+        public async Task<Ticket> GetById(int id)
+        {
+            return await _ticketRepository.Query()
+                          .FirstOrDefaultAsync(x => x.Id == id);
         }
     }
 }

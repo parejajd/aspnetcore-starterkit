@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreApps.StarterKit.Models", "CreApps.StarterKit.Models\CreApps.StarterKit.Models.csproj", "{7DD21E06-8807-4301-A33F-EA58ACBBBCED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreApps.StarterKit.Models", "CreApps.StarterKit.Models\CreApps.StarterKit.Models.csproj", "{7DD21E06-8807-4301-A33F-EA58ACBBBCED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreApps.StarterKit.DataAccess", "CreApps.StarterKit.DataAccess\CreApps.StarterKit.DataAccess.csproj", "{63F6E6B6-B10E-4132-8D55-88CB198022EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreApps.StarterKit.DataAccess", "CreApps.StarterKit.DataAccess\CreApps.StarterKit.DataAccess.csproj", "{63F6E6B6-B10E-4132-8D55-88CB198022EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreApps.StarterKit.Services", "CreApps.StarterKit.Services\CreApps.StarterKit.Services.csproj", "{E191352B-27A4-466E-A6EE-59349254593F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreApps.StarterKit.Services", "CreApps.StarterKit.Services\CreApps.StarterKit.Services.csproj", "{E191352B-27A4-466E-A6EE-59349254593F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreApps.StarterKit.Web", "CreApps.StarterKit.Web\CreApps.StarterKit.Web.csproj", "{60AB3507-21C5-48B8-B262-2AE7366E4562}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreApps.StarterKit.Web", "CreApps.StarterKit.Web\CreApps.StarterKit.Web.csproj", "{60AB3507-21C5-48B8-B262-2AE7366E4562}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreApps.StarterKit.Test", "CreApps.StarterKit.Test\CreApps.StarterKit.Test.csproj", "{491EF41C-985C-4929-9E31-1BC25C7DDDAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{60AB3507-21C5-48B8-B262-2AE7366E4562}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60AB3507-21C5-48B8-B262-2AE7366E4562}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60AB3507-21C5-48B8-B262-2AE7366E4562}.Release|Any CPU.Build.0 = Release|Any CPU
+		{491EF41C-985C-4929-9E31-1BC25C7DDDAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{491EF41C-985C-4929-9E31-1BC25C7DDDAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{491EF41C-985C-4929-9E31-1BC25C7DDDAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{491EF41C-985C-4929-9E31-1BC25C7DDDAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

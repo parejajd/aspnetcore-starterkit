@@ -43,6 +43,26 @@ namespace CreApps.StarterKit.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Ticket ticket)
         {
+            if (ticket is null)
+            {
+                return BadRequest("El ticket no puede estar nulo");
+            }
+            else
+            {
+                if (ModelState.IsValid == false)
+                {
+                    return BadRequest("El ticket contiene datos erroneos");
+                }
+                else
+                {
+                    var existingTicket = this._ticketService.GetById(ticket.Id);
+                    if (existingTicket != null)
+                    {
+                        return BadRequest("El ticket especificado ya existe");
+                    }
+                }
+            }
+
             await _ticketService.Create(ticket);
             return RedirectToAction("Index");
         }

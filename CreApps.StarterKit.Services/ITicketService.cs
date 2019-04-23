@@ -12,5 +12,6 @@ namespace CreApps.StarterKit.Services
         Task Update(Ticket ticket);
         Task Delete(int ticketId);
         Task<IList<Ticket>> GetAll();
+        Task<Ticket> GetById(int id);
     }
 }
