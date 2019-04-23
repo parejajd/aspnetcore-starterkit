@@ -37,6 +37,16 @@ namespace CreApps.StarterKit.Web
             services.AddDbContext<StarterKitDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("StarterKitDbContext")));
 
+            services.AddAuthentication().AddFacebook(facebookOptions =>
+            {
+                facebookOptions.AppId = Configuration["Authentication:Facebook:AppId"];
+                facebookOptions.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
+            }).AddMicrosoftAccount(microsoftOptions =>
+            {
+                microsoftOptions.ClientId = Configuration["Authentication:Microsoft:ApplicationId"];
+                microsoftOptions.ClientSecret = Configuration["Authentication:Microsoft:Password"];
+            }); ;
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddScoped(typeof(IRepository<,>), typeof(Repository<,>));
@@ -61,6 +71,7 @@ namespace CreApps.StarterKit.Web
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseAuthentication(); // <-- add this line
 
             app.UseMvc(routes =>
             {

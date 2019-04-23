@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using CreApps.StarterKit.Models;
 using CreApps.StarterKit.Services;
 using CreApps.StarterKit.Web.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CreApps.StarterKit.Web.Controllers
 {
+    [Authorize]
     public class TicketController : Controller
     {
         private readonly ITicketService _ticketService;
