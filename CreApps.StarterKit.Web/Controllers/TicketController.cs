@@ -23,7 +23,7 @@ namespace CreApps.StarterKit.Web.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var allTickets = await _ticketService.GetAll();
+            var allTickets = await _ticketService.GetAll(fullTree:true);
 
             return View(allTickets);
         }
@@ -49,13 +49,13 @@ namespace CreApps.StarterKit.Web.Controllers
             }
             else
             {
-                if (ModelState.IsValid == false)
+                if (ModelState.IsValid == false || ticket.IsValid() == false)
                 {
                     return BadRequest("El ticket contiene datos erroneos");
                 }
                 else
                 {
-                    var existingTicket = this._ticketService.GetById(ticket.Id);
+                    var existingTicket = await this._ticketService.GetById(ticket.Id);
                     if (existingTicket != null)
                     {
                         return BadRequest("El ticket especificado ya existe");

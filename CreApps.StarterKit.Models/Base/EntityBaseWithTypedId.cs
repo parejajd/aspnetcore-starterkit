@@ -1,10 +1,12 @@
-﻿namespace CreApps.StarterKit.Models
+﻿using CreApps.StarterKit.Models.Base;
+
+namespace CreApps.StarterKit.Models
 {
     /// <summary>
     /// Base class for the implementation of models
     /// </summary>
     /// <typeparam name="Tid">Property that identified this Class</typeparam>
-    public abstract class EntityBaseWithTypedId<TId> : IEntityWithTypedId<TId>
+    public abstract class EntityBaseWithTypedId<TId> : ValidatableObject, IEntityWithTypedId<TId>
     {
         /// <summary>
         /// property that identifies the class

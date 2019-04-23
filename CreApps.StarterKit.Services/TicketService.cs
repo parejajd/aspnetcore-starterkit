@@ -17,15 +17,21 @@ namespace CreApps.StarterKit.Services
             _ticketRepository = ticketRepository;
         }
 
-        public async Task<IList<Ticket>> GetAll()
+        public async Task<IList<Ticket>> GetAll(bool fullTree = false)
         {
-            var tickets = await _ticketRepository.Query()
+            if (fullTree)
+            {
+                return await _ticketRepository.Query()
                                 .Include(x => x.Type)
                                 .Include(x => x.Status)
                                 .Include(x => x.Priority)
                                 .ToListAsync();
-
-            return tickets;
+            }
+            else
+            {
+                return await _ticketRepository.Query()
+                                .ToListAsync();
+            }
         }
 
         public async Task Create(Ticket ticket)
@@ -60,6 +66,12 @@ namespace CreApps.StarterKit.Services
 
         public async Task<Ticket> GetById(int id)
         {
+            var tickets = await _ticketRepository.Query()
+                               .Include(x => x.Type)
+                               .Include(x => x.Status)
+                               .Include(x => x.Priority)
+                               .ToListAsync();
+
             return await _ticketRepository.Query()
                           .FirstOrDefaultAsync(x => x.Id == id);
         }
