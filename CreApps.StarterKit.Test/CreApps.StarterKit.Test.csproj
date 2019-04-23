@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -23,5 +22,5 @@
     <ProjectReference Include="..\CreApps.StarterKit.Services\CreApps.StarterKit.Services.csproj" />
     <ProjectReference Include="..\CreApps.StarterKit.Web\CreApps.StarterKit.Web.csproj" />
   </ItemGroup>
-  
+
 </Project>

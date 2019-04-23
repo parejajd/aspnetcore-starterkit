@@ -13,7 +13,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace CreApps.StarterKit.Test
+namespace CreApps.StarterKit.Test.Web.Controllers
 {
     public class TicketControllerTests
     {
@@ -36,14 +36,13 @@ namespace CreApps.StarterKit.Test
             var ticketController = new TicketController(_ticketService.Object, _parameterService.Object);
             var result = ticketController.Index();
             var viewResult = Assert.IsType<ViewResult>(result.Result);
-            Assert.IsAssignableFrom<IList<Ticket>>(viewResult.Model);
         }
 
         [Fact]
         public void Index_Will_Be_Return_Elements()
         {
             var ticketController = new TicketController(_ticketService.Object, _parameterService.Object);
-            var result = ticketController.Index();
+            var result = ticketController.Index(false);
             var viewResult = Assert.IsType<ViewResult>(result.Result);
             var model = Assert.IsAssignableFrom<IList<Ticket>>(viewResult.Model);
             Assert.NotEmpty(model);

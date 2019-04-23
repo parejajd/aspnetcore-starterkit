@@ -11,7 +11,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreApps.StarterKit.Services
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreApps.StarterKit.Web", "CreApps.StarterKit.Web\CreApps.StarterKit.Web.csproj", "{60AB3507-21C5-48B8-B262-2AE7366E4562}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreApps.StarterKit.Test", "CreApps.StarterKit.Test\CreApps.StarterKit.Test.csproj", "{491EF41C-985C-4929-9E31-1BC25C7DDDAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreApps.StarterKit.Test", "CreApps.StarterKit.Test\CreApps.StarterKit.Test.csproj", "{491EF41C-985C-4929-9E31-1BC25C7DDDAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{22AA9791-34D6-4448-AA0E-343F9D6D40EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{6FA2CB01-7552-483E-9AA9-F7777B597F28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{0D820271-7969-423E-BC06-339ACD76870A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobile", "Mobile", "{A479DC3D-721B-4834-9EC2-C0F5F96F28A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +50,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7DD21E06-8807-4301-A33F-EA58ACBBBCED} = {22AA9791-34D6-4448-AA0E-343F9D6D40EB}
+		{63F6E6B6-B10E-4132-8D55-88CB198022EF} = {22AA9791-34D6-4448-AA0E-343F9D6D40EB}
+		{E191352B-27A4-466E-A6EE-59349254593F} = {22AA9791-34D6-4448-AA0E-343F9D6D40EB}
+		{60AB3507-21C5-48B8-B262-2AE7366E4562} = {6FA2CB01-7552-483E-9AA9-F7777B597F28}
+		{491EF41C-985C-4929-9E31-1BC25C7DDDAB} = {0D820271-7969-423E-BC06-339ACD76870A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8BD60308-D88E-4D9C-8BA5-EAD0E41638AF}

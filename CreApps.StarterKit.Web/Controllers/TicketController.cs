@@ -21,9 +21,9 @@ namespace CreApps.StarterKit.Web.Controllers
             _parametersService = parametersService;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(bool fullTree = true)
         {
-            var allTickets = await _ticketService.GetAll(fullTree:true);
+            var allTickets = await _ticketService.GetAll(fullTree);
 
             return View(allTickets);
         }
