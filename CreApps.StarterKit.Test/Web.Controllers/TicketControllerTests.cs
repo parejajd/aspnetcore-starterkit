@@ -1,8 +1,8 @@
 using CreApps.StarterKit.DataAccess;
 using CreApps.StarterKit.Models;
 using CreApps.StarterKit.Services;
-using CreApps.StarterKit.Test.DataAccess;
-using CreApps.StarterKit.Test.DataClass;
+using CreApps.StarterKit.Test.Web.DataAccess;
+using CreApps.StarterKit.Test.Web.DataClass;
 using CreApps.StarterKit.Web.Controllers;
 using CreApps.StarterKit.Web.Models;
 using Microsoft.AspNetCore.Mvc;

@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CreApps.StarterKit.Test.DataAccess
+namespace CreApps.StarterKit.Test.Web.DataAccess
 {
     public class InMemoryDbContextFactory
     {

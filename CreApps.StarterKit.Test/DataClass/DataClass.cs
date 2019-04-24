@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace CreApps.StarterKit.Test.DataClass
+namespace CreApps.StarterKit.Test.Web.DataClass
 {
     public class TicketNullTheoryData : TheoryData<Ticket>
     {

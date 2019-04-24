@@ -11,7 +11,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CreApps.StarterKit.Web.Controllers
 {
-    [Authorize]
     public class TicketController : Controller
     {
         private readonly ITicketService _ticketService;
