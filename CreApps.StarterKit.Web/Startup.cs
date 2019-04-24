@@ -36,7 +36,7 @@ namespace CreApps.StarterKit.Web
 
             services.AddDbContext<StarterKitDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("StarterKitDbContext")));
-                       
+
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
