@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "CreApps.StarterKit.WebSPA": {
+    "CreApps.Heimdall.Web": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -21,8 +21,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              
             ],
             "scripts": []
           },
@@ -49,18 +48,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "CreApps.StarterKit.WebSPA:build"
+            "browserTarget": "CreApps.Heimdall.Web:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "CreApps.StarterKit.WebSPA:build:production"
+              "browserTarget": "CreApps.Heimdall.Web:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "CreApps.StarterKit.WebSPA:build"
+            "browserTarget": "CreApps.Heimdall.Web:build"
           }
         },
         "test": {
@@ -94,7 +93,7 @@
         }
       }
     },
-    "CreApps.StarterKit.WebSPA-e2e": {
+    "CreApps.Heimdall.Web-e2e": {
       "root": "",
       "sourceRoot": "e2e",
       "projectType": "application",
@@ -103,7 +102,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "CreApps.StarterKit.WebSPA:serve"
+            "devServerTarget": "CreApps.Heimdall.Web:serve"
           }
         },
         "lint": {
@@ -120,7 +119,7 @@
       }
     }
   },
-  "defaultProject": "CreApps.StarterKit.WebSPA",
+  "defaultProject": "CreApps.Heimdall.Web",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",

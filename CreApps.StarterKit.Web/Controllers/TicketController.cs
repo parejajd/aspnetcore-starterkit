@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using CreApps.StarterKit.Models;
 using CreApps.StarterKit.Services;
@@ -11,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CreApps.StarterKit.Web.Controllers
 {
+    [Route("[controller]")]
     public class TicketController : Controller
     {
         private readonly ITicketService _ticketService;
@@ -27,6 +29,14 @@ namespace CreApps.StarterKit.Web.Controllers
             var allTickets = await _ticketService.GetAll(fullTree);
 
             return View(allTickets);
+        }
+
+        [Route("Get")]
+        [ProducesResponseType(typeof(List<Ticket>),(int)HttpStatusCode.OK)]
+        public async Task<IActionResult> Get()
+        {
+            var allTickets = await _ticketService.GetAll(true);
+            return Ok(allTickets);
         }
 
         [HttpGet]

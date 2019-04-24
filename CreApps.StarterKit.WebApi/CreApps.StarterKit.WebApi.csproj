@@ -10,4 +10,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CreApps.StarterKit.DataAccess\CreApps.StarterKit.DataAccess.csproj" />
+    <ProjectReference Include="..\CreApps.StarterKit.Models\CreApps.StarterKit.Models.csproj" />
+    <ProjectReference Include="..\CreApps.StarterKit.Services\CreApps.StarterKit.Services.csproj" />
+  </ItemGroup>
+
 </Project>
