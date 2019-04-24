@@ -1,0 +1,192 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "twitter-bootstrap@4.3.1",
+      "destination": "wwwroot/lib/twitter-bootstrap/",
+      "files": [
+        "js/bootstrap.min.js",
+        "js/bootstrap.js",
+        "css/bootstrap.min.css",
+        "css/bootstrap.css"
+      ]
+    }
+  ,
+{
+  "library": "Chart.js@2.8.0",
+  "destination": "wwwroot/lib/Chart.js/",
+  "files": [
+    "Chart.min.js",
+    "Chart.js",
+    "Chart.min.css",
+    "Chart.css"
+  ]
+}
+,
+{
+  "library": "font-awesome@5.8.1",
+  "destination": "wwwroot/lib/font-awesome/",
+  "files": [
+    "css/all.min.css",
+    "css/all.css",
+    "webfonts/fa-brands-400.eot",
+    "webfonts/fa-brands-400.svg",
+    "webfonts/fa-brands-400.ttf",
+    "webfonts/fa-brands-400.woff",
+    "webfonts/fa-brands-400.woff2",
+    "webfonts/fa-regular-400.eot",
+    "webfonts/fa-regular-400.svg",
+    "webfonts/fa-regular-400.ttf",
+    "webfonts/fa-regular-400.woff",
+    "webfonts/fa-regular-400.woff2",
+    "webfonts/fa-solid-900.eot",
+    "webfonts/fa-solid-900.svg",
+    "webfonts/fa-solid-900.ttf",
+    "webfonts/fa-solid-900.woff",
+    "webfonts/fa-solid-900.woff2",
+    "js/all.js",
+    "js/all.min.js"
+  ]
+}
+,
+{
+  "library": "jquery@3.4.0",
+  "destination": "wwwroot/lib/jquery/",
+  "files": [
+    "jquery.min.js",
+    "jquery.js"
+  ]
+}
+,
+{
+  "library": "jquery-migrate@3.0.1",
+  "destination": "wwwroot/lib/jquery-migrate/",
+  "files": [
+    "jquery-migrate.min.js",
+    "jquery-migrate.js"
+  ]
+}
+,
+{
+  "library": "jquery-mousewheel@3.1.13",
+  "destination": "wwwroot/lib/jquery-mousewheel/",
+  "files": [
+    "jquery.mousewheel.min.js",
+    "jquery.mousewheel.js"
+  ]
+}
+,
+{
+  "library": "malihu-custom-scrollbar-plugin@3.1.5",
+  "destination": "wwwroot/lib/malihu-custom-scrollbar-plugin/",
+  "files": [
+    "jquery.mCustomScrollbar.concat.min.js",
+    "jquery.mCustomScrollbar.css",
+    "jquery.mCustomScrollbar.js",
+    "jquery.mCustomScrollbar.min.css",
+    "jquery.mCustomScrollbar.min.js",
+    "jquery.mCustomScrollbar.min.js.map",
+    "mCSB_buttons.png"
+  ]
+}
+,
+{
+  "library": "popper.js@1.15.0",
+  "destination": "wwwroot/lib/popper.js/",
+  "files": [
+    "esm/popper-utils.js",
+    "esm/popper-utils.js.map",
+    "esm/popper-utils.min.js",
+    "esm/popper-utils.min.js.map",
+    "esm/popper.js",
+    "esm/popper.js.map",
+    "esm/popper.min.js",
+    "esm/popper.min.js.map",
+    "umd/popper-utils.js",
+    "umd/popper-utils.js.map",
+    "umd/popper-utils.min.js",
+    "umd/popper-utils.min.js.map",
+    "umd/popper.js",
+    "umd/popper.js.map",
+    "umd/popper.min.js",
+    "umd/popper.min.js.map",
+    "popper-utils.js",
+    "popper-utils.js.map",
+    "popper-utils.min.js",
+    "popper-utils.min.js.map",
+    "popper.js",
+    "popper.js.map",
+    "popper.min.js",
+    "popper.min.js.map"
+  ]
+}
+,
+{
+  "library": "select2@4.0.5",
+  "destination": "wwwroot/lib/select2/",
+  "files": [
+    "js/select2.min.js",
+    "css/select2.css",
+    "css/select2.min.css",
+    "js/select2.full.js",
+    "js/select2.full.min.js",
+    "js/select2.js",
+    "js/i18n/af.js",
+    "js/i18n/ar.js",
+    "js/i18n/az.js",
+    "js/i18n/bg.js",
+    "js/i18n/bs.js",
+    "js/i18n/ca.js",
+    "js/i18n/cs.js",
+    "js/i18n/da.js",
+    "js/i18n/de.js",
+    "js/i18n/dsb.js",
+    "js/i18n/el.js",
+    "js/i18n/en.js",
+    "js/i18n/es.js",
+    "js/i18n/et.js",
+    "js/i18n/eu.js",
+    "js/i18n/fa.js",
+    "js/i18n/fi.js",
+    "js/i18n/fr.js",
+    "js/i18n/gl.js",
+    "js/i18n/he.js",
+    "js/i18n/hi.js",
+    "js/i18n/hr.js",
+    "js/i18n/hsb.js",
+    "js/i18n/hu.js",
+    "js/i18n/hy.js",
+    "js/i18n/id.js",
+    "js/i18n/is.js",
+    "js/i18n/it.js",
+    "js/i18n/ja.js",
+    "js/i18n/km.js",
+    "js/i18n/ko.js",
+    "js/i18n/lt.js",
+    "js/i18n/lv.js",
+    "js/i18n/mk.js",
+    "js/i18n/ms.js",
+    "js/i18n/nb.js",
+    "js/i18n/nl.js",
+    "js/i18n/pl.js",
+    "js/i18n/ps.js",
+    "js/i18n/pt-BR.js",
+    "js/i18n/pt.js",
+    "js/i18n/ro.js",
+    "js/i18n/ru.js",
+    "js/i18n/sk.js",
+    "js/i18n/sl.js",
+    "js/i18n/sr-Cyrl.js",
+    "js/i18n/sr.js",
+    "js/i18n/sv.js",
+    "js/i18n/th.js",
+    "js/i18n/tr.js",
+    "js/i18n/uk.js",
+    "js/i18n/vi.js",
+    "js/i18n/zh-CN.js",
+    "js/i18n/zh-TW.js"
+  ]
+}
+]
+}
