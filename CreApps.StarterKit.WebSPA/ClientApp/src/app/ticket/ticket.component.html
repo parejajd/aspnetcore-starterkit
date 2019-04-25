@@ -1,7 +1,9 @@
-<button (click)="actualizarInfo()" class="btn"  >Actualizar tickets</button>
+<button (click)="actualizarInfo()" class="btn" [class.btn-success]="Tickets.lenght==0">{{TextoBoton}}</button>
 
 <div class="row">
-  <div *ngFor="let ticket of Tickets" class="ticket col-lg-6 col-md-6" [class.danger]="ticket.PriorityId == 1">
-    <h2>{{ticket.Subject}}</h2>
+  <div *ngFor="let ticket of Tickets" class="ticket col-lg-6 col-md-6">
+    <div [class.bg-danger]="ticket.priorityId === 1">
+      <h2>{{ticket.subject}} -- {{ticket.priority.priorityName}}</h2>
+    </div>
   </div>
 </div>

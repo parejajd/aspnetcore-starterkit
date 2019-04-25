@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Ticket } from '../../Models/Ticket';
 import { HttpClient } from '@angular//common/http'
 import { GlobalSettings } from '../../base/GlobalSettings';
-import { tick } from '@angular/core/src/render3';
-
-let Tickets: Ticket[] = [];
 
 @Component({
   selector: 'app-ticket',
@@ -13,16 +10,24 @@ let Tickets: Ticket[] = [];
 })
 export class TicketComponent implements OnInit {
 
-  constructor(private httpClient:HttpClient) { }
+  Tickets: Ticket[] = [];
+  TextoBoton: string = "Actualizar";
+
+  constructor(private httpClient: HttpClient) { }
 
   actualizarInfo() {
-    console.log(Tickets);
-    Tickets = [];
-    this.httpClient.get<Ticket>(GlobalSettings.ApiURL+'Ticket/Get').subscribe(ticket=> Tickets.push(ticket));
+    this.httpClient.get(GlobalSettings.ApiURL + 'Ticket/Get').toPromise().then((res: Ticket[]) => {
+      if (this.Tickets.length == 0) {
+        this.Tickets = res;
+      } else {
+        this.Tickets.push(...res);
+      }
+    });
+    console.log(this.Tickets);
+    this.TextoBoton = "Traer mas datos";
   }
 
   ngOnInit() {
-    this.httpClient.get<Ticket>(GlobalSettings.ApiURL+'Ticket/Get').subscribe(ticket=> Tickets.push(ticket));
   }
 
 }
