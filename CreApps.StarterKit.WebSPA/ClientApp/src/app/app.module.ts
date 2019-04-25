@@ -19,6 +19,7 @@ const routes: Routes =
             children: [
                 //Todas las páginas que necesiten del layout base van aquí
                 { path: '', component: HomeComponent },
+                { path: 'home', component: HomeComponent },
                 { path: 'ticket', component: TicketComponent,pathMatch: 'full' }
             ]
         },
