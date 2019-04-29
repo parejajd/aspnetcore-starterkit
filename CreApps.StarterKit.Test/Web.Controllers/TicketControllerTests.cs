@@ -110,18 +110,23 @@ namespace CreApps.StarterKit.Test.Web.Controllers
         {
             using (var context = new InMemoryDbContextFactory().GetDbContext())
             {
-                var repository = new Repository<Ticket, int>(context);
+                var repositoryTicket = new Repository<Ticket, int>(context);
+                var repositoryPriority = new Repository<Priority, int>(context);
+                var repositoryStatus = new Repository<Status, int>(context);
+                var repositoryTicketType = new Repository<TicketType, int>(context);
 
-                var service = new TicketService(repository);
+                var serviceTicket = new TicketService(repositoryTicket);
+                var serviceParameters = new ParametersService(repositoryPriority, repositoryStatus, repositoryTicketType);
 
-                using (var controller = new TicketController(service, _parameterService.Object))
+
+                using (var controller = new TicketController(serviceTicket, serviceParameters))
                 {
                     int cantidad = 1;
                     foreach (var ticket in new List<Ticket> { ticketOk1, ticketOk2, ticketOk3 })
                     {
                         var result = controller.Create(ticket);
                         var viewResult = Assert.IsType<RedirectToActionResult>(result.Result);
-                        Assert.Equal(cantidad, service.GetAll().Result.Count);
+                        Assert.Equal(cantidad, serviceTicket.GetAll().Result.Count);
                         cantidad++;
                     }
                 }
@@ -214,7 +219,6 @@ namespace CreApps.StarterKit.Test.Web.Controllers
                 }
             });
         }
-
 
         private async Task<Ticket> GetTicketById(int id)
         {
