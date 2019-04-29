@@ -3,12 +3,15 @@ import { Status } from '../Models/Status'
 import { Priority } from '../Models/Priority'
 
 export class Ticket {
-    Subject: string;
+    subject: string;
     TypeId: number;
-    //Type: TicketType;
+    Type: TicketType;
     StatusId: number;
-    //Status: Status;
+    Status: Status;
     PriorityId: number;
-    //Priority: Priority;
+    Priority: Priority;
     Description: string;
+    CreatedOn: Date;
+    UpdatedOn:Date;
+    Id:number;
 }
